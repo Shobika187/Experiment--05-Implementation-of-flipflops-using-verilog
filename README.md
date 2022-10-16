@@ -107,34 +107,89 @@ Q(t+1)=T′Q(t)+TQ(t)′
 
 
 ### PROGRAM 
+```
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: P Shobika
+RegisterNumber:  212221230096
+## Code 1:
+module flipflop(S,R,clock,Q,Qbar);
+input S,R,clock;
+output Q,Qbar;
+wire X,Y;
+nand(X,S,clock);
+nand(Y,R,clock);
+nand(Q,X,Qbar);
+nand(Qbar,Y,Q);
+endmodule
+
+## Code 2:
+
+module df(D,clock,Q,Qbar);
+input D,clock;
+output Q,Qbar;
+assign Dbar = ~D;
+wire X,Y;
+nand(X,D,clock);
+nand(Y,Dbar,clock);
+nand(Q,X,Qbar);
+nand(Qbar,Y,Q);
+endmodule
+
+## Code 3:
+
+module exp5(J,K,clock,Q,Qbar);
+input J,K,clock;
+output Q,Qbar;
+wire P,S;
+nand(P,J,clock,Qbar);
+nand(S,K,clock,Q);
+nand(Q,P,Qbar);
+nand(Qbar,S,Q);
+endmodule
+
+## Code 4:
+
+module tb(T,clock,Q,Qbar);
+input T,clock;
+output Q,Qbar;
+wire A,B;
+nand(A,T,clock,Qbar);
+nand(B,T,clock,Q);
+nand(Q,A,Qbar);
+nand(Qbar,B,Q);
+endmodule
 */
-
-
-
-
-
-
+```
 ### RTL LOGIC FOR FLIPFLOPS 
 
+## RTL 1:
+![Screenshot (118)](https://user-images.githubusercontent.com/94508142/196018778-8cfb7c6e-4700-4277-bbc8-34a1e5507874.png)
 
+## RTL 2:
+![Screenshot (119)](https://user-images.githubusercontent.com/94508142/196018786-ccdd0621-2c2c-483d-801a-52f9b76da71a.png)
 
+## RTL 3:
+![Screenshot (120)](https://user-images.githubusercontent.com/94508142/196018796-2965c585-4c57-465b-b48c-d8e3db5ac837.png)
 
-
-
-
+## RTL 4:
+![Screenshot (121)](https://user-images.githubusercontent.com/94508142/196018822-d4534861-00db-4c3d-a695-efde1c7903a2.png)
 
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
 
+## Timimg Diagram 1:
+![Screenshot (122)](https://user-images.githubusercontent.com/94508142/196018847-c1f76097-a65a-4461-a4d9-f0d12eb565bc.png)
 
+## Timimg Diagram 2:
+![Screenshot (123)](https://user-images.githubusercontent.com/94508142/196018850-5ae6a2c9-c08c-49ab-839a-d98ca3cfb8b2.png)
 
+## Timimg Diagram 3:
+![Screenshot (124)](https://user-images.githubusercontent.com/94508142/196018881-2b7dd93f-3642-4f06-a003-8119e1879db5.png)
 
-
-
-
+## Timimg Diagram 4:
+![Screenshot (125)](https://user-images.githubusercontent.com/94508142/196018884-53089ac3-e2cb-498a-ae95-8c0d98961321.png)
 
 ### RESULTS 
+Implementing of  all the flipflops using verilog and validating their functionality using their functional tables is successfully Completed.
+
