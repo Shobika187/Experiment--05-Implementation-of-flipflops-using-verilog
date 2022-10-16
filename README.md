@@ -105,7 +105,7 @@ Q(t+1)=T′Q(t)+TQ(t)′
 
 ## Step 1:
 
-Open Quartus II and select new project and choose the file location.
+Open Quartus and select new project and choose the file location.
 
 ## Step 2:
 
