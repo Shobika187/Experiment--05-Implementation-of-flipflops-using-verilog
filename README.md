@@ -113,6 +113,7 @@ Program for flipflops  and verify its truth table in quartus using Verilog progr
 Developed by: P Shobika
 RegisterNumber:  212221230096
 ## Code 1:
+```
 module flipflop(S,R,clock,Q,Qbar);
 input S,R,clock;
 output Q,Qbar;
@@ -122,8 +123,10 @@ nand(Y,R,clock);
 nand(Q,X,Qbar);
 nand(Qbar,Y,Q);
 endmodule
+```
 
 ## Code 2:
+```
 
 module df(D,clock,Q,Qbar);
 input D,clock;
@@ -135,9 +138,9 @@ nand(Y,Dbar,clock);
 nand(Q,X,Qbar);
 nand(Qbar,Y,Q);
 endmodule
-
+```
 ## Code 3:
-
+```
 module exp5(J,K,clock,Q,Qbar);
 input J,K,clock;
 output Q,Qbar;
@@ -147,9 +150,9 @@ nand(S,K,clock,Q);
 nand(Q,P,Qbar);
 nand(Qbar,S,Q);
 endmodule
-
+```
 ## Code 4:
-
+```
 module tb(T,clock,Q,Qbar);
 input T,clock;
 output Q,Qbar;
@@ -159,6 +162,7 @@ nand(B,T,clock,Q);
 nand(Q,A,Qbar);
 nand(Qbar,B,Q);
 endmodule
+```
 */
 ```
 ### RTL LOGIC FOR FLIPFLOPS 
